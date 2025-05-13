@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    transition: all .4s ease-in-out;
+    transform: translateY(100px);
+    height: 100px;
+    color: aquamarine;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+}

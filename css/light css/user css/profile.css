@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    transition: all .4s ease-in-out;
+    position: fixed;
+    background: rgba(7, 7, 46, 0.281);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+
+#container #container-image {
+    transition: all .4s ease-in-out;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container #container-image img {
+    transition: all .4s ease-in-out;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: border-img 5s infinite linear;
+}
+
+@keyframes border-img {
+    0% {
+        border: 5px solid aquamarine
+    }
+    50% {
+        border: 5px solid rgba(6, 44, 31, 0.696);
+    }
+    100% {
+        border: 5px solid aquamarine
+    }
+}
+
+#container #container-information {
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    color: rgba(3, 3, 38, 0.944);
+    font-size: 14pt;
+}
+
+#container #container-information span:hover {
+    transition: all .4s ease-in-out;
+    color: wheat;
+    cursor: grab;
+}
+
+#container button {
+    transition: all .4s ease-in-out;
+    position: relative;
+    background: transparent;
+    color: rgba(3, 3, 38, 0.944);
+    border: 3px solid rgba(3, 3, 38, 0.944);
+    font-size: 14pt;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 235px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container button:hover {
+    transition: all .4s ease-in-out;
+    background: rgba(3, 3, 38, 0.944);
+    color: aquamarine;
+}
+
+#container button:active {
+    transition: all .4s ease-in-out;
+    transform: scale(.5);
+}
+
+#container button::before {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    content: "";
+    background: aquamarine;
+    width: 0;
+    height: 3px;
+}
+
+#container button::after {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    top: -3px;
+    right: 50%;
+    content: "";
+    background: aquamarine;
+    width: 0;
+    height: 3px;
+}
+
+#container button:hover::before {
+    transition: all .4s ease-in-out;
+    left: 0;
+    width: 100%;
+}
+#container button:hover::after {
+    transition: all .4s ease-in-out;
+    right: 0;
+    width: 100%;
+}

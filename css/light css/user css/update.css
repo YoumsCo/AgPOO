@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 
+***********************************************************************************
+CSS du container  
+*********************************************************************************** 
+*/
+
+#container {
+    transition:  all .4s ease-in-out;
+    position: relative;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    width: 40%;
+    height: 85%;
+    color: rgba(3, 3, 38, 0.944);
+    border: 2px solid rgba(3, 3, 38, 0.944);
+    box-shadow: 0 5px 10px black;
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        transition:  all .4s ease-in-out;
+        width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        transition:  all .4s ease-in-out;
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #container {
+        transition:  all .4s ease-in-out;
+        width: 80% !important;
+        height: 70%;
+    }
+}
+
+
+
+/* 
+***********************************************************************************
+CSS des formulaires  
+*********************************************************************************** 
+*/
+
+
+#container .container-form {
+    transition:  all .7s ease-in-out;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(3, 3, 38, 0.944);
+}
+
+@media screen and (min-width: 800px) {
+    #container .container-form form span {
+        transition: all .4s ease-in-out;
+        opacity: 0;
+        z-index: -300;
+        position: absolute;
+    }
+}
+
+.active-container .container-form.form-sign-up {
+    transition: all .7s ease-in-out !important;
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -200;
+}
+#container .container-form form {
+    transition:  all .4s ease-in-out;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#container .container-form form [type="text"],
+#container .container-form form [type="number"],
+#container .container-form form [type="tel"],
+#container .container-form form [type="email"],
+#container .container-form form [type="password"] {
+    position: relative;
+    transition:  all .4s ease-in-out;
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    color: rgba(3, 3, 38, 0.944);
+    font-weight: bolder;
+    font-size: 13pt;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgba(3, 3, 38, 0.944);
+}
+
+
+#container .container-form form [type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(245, 245, 245, 0.087);
+    border: 2px solid whitesmoke;
+    transform: translateY(4px);
+    cursor: pointer;
+}
+
+#container .container-form form [type="radio"]:checked {
+    transition: all .2s ease-in-out;
+    border: 4px solid whitesmoke;
+    background: rgba(245, 153, 16, 0.29);
+}
+
+#container .container-form form [type="text"]::placeholder,
+#container .container-form form [type="number"]::placeholder,
+#container .container-form form [type="tel"]::placeholder,
+#container .container-form form [type="email"]::placeholder,
+#container .container-form form [type="password"]::placeholder {
+    transition:  all .2s ease-in-out;
+    opacity: 0;
+    color: aquamarine;
+}
+
+#container .container-form form input:focus::placeholder {
+    transition:  all .4s ease-in-out;
+    opacity: 1;
+}
+
+#container .container-form form label {
+    transition:  all .4s ease-in-out;
+    color: rgba(3, 3, 38, 0.944);
+    font-weight: bolder;
+    font-size: 14pt;
+}
+
+#container .container-form form .label {
+    transition:  all .4s ease-in-out;
+    position: absolute;
+    transform: translate(13px, -28px);
+    z-index: -10;
+    color: rgba(3, 3, 38, 0.944);
+}
+
+#container .container-form form input:focus + .label,
+#container .container-form form input:not(:placeholder-shown) + .label {
+    transition:  all .4s ease-in-out;
+    transform: translateY(-50px);
+    font-size: 10pt;
+}
+
+
+#container .container-form.form-sign-up #sexe {
+    transform: translateY(-15px);
+}
+
+#container .container-form form .form-title {
+    transition:  all .4s ease-in-out;
+    transform: translate(50%, -60%);
+    width: 50%;
+}
+
+#container .container-form form .form-title marquee h1 {
+    transition:  all .4s ease-in-out;
+    background: url('../../../img/A3XO.gif');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#container .container-form form .fa {
+    transition:  all .3s ease-in-out;
+    position: relative;
+    left: 90%;
+    top: -30px;
+    font-size: 16pt;
+    z-index: -100;
+}
+
+#container .container-form form .fa-eye,
+#container .container-form form .fa-eye-slash {
+    z-index: 2;
+    cursor: pointer;
+}
+
+#container .container-form form [type="submit"] {
+    transition:  all .3s ease-in-out;
+    position: relative;
+    left: 24%;
+    width: 50%;
+    height: 45px;
+    background: rgba(3, 3, 38, 0.944);
+    box-shadow: 0 5px 15px rgba(3, 3, 38, 0.944);
+    border: 2px solid rgba(3, 3, 38, 0.944);
+    color: white;
+    font-size: 14pt;
+    font-weight: bolder;
+}
+
+#container .container-form form [type="submit"]:active {
+    transition:  all .2s ease-in-out;
+    transform: scale(.9);
+}
+
+#container .container-form form [type="submit"]:hover {
+    transition:  all .2s ease-in-out;
+    color: rgba(4, 4, 43, 0.709);
+    background: transparent;
+    cursor: pointer;
+}
+
+
+
+/* 
+***********************************************************************************
+CSS des oreilles du container  
+*********************************************************************************** 
+*/
+
+
+#container .ears {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50% 50% 10px 10px;
+    background: transparent;
+    border: 23px solid rgba(3, 3, 38, 0.944);
+}
+
+#container .ears.left {
+    transition: all .4s ease-in-out;
+    left: 0;
+    transform: translate(-35%, -40%) rotate(-45deg);
+}
+#container .ears.right {
+    transition: all .4s ease-in-out;
+    right: 0;
+    transform: translate(35%, -40%) rotate(45deg);
+}
+

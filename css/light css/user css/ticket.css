@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body::-webkit-scrollbar {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(4, 39, 27, 0.9);
+    border-radius: 20px;
+}
+
+#ticket {
+    transition: all .4s ease-in-out;
+	position: relative;
+	width: 70%;
+	background: rgba(3, 3, 38, 0.398);
+	border: 2px solid rgba(3, 3, 38, 0.944);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 10px 20px black;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+	display: grid;
+	grid-template-areas: 
+		"title title title"
+		"nom to place"
+		"prenom from statut"
+		"date reference reference" 
+		"mode mode categorie"
+	;
+	gap: 10px 40px;
+	grid-template-columns: 25%, 1fr;
+}
+#ticket.download {
+	border: 5px solid rgba(4, 39, 27, 0.9) !important;
+	background: rgba(4, 39, 27, 0.699) !important;
+}
+
+@media screen and (max-width: 490px) {
+	#ticket {
+		grid-template-areas: 
+		"title title"
+		"nom to"
+		"prenom from"
+		"place statut"
+		"reference reference" 
+		"mode mode" 
+		"date categorie"
+	;
+	}
+
+
+}
+
+@media screen and (max-width: 955px) {
+	#ticket {
+		transition: all .5s ease-in-out;
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 730px) {
+	#ticket {
+		transition: all .5s ease-in-out;
+		width: 95%;
+	}
+	#ticket input {
+		transition: all .5s ease-in-out;
+		font-size: 10pt !important;
+	}
+}
+
+#ticket label {
+    color: rgba(3, 3, 38, 0.944);
+    font-size: 14pt;
+	font-weight: bolder;
+}   
+
+.download label {
+    color: wheat !important;
+}
+
+@media screen and (max-width: 500px){
+	#ticket label {
+		font-size: 10.5pt;
+	}
+}
+
+#ticket #title {
+	grid-area: title;
+	color: aquamarine;
+	text-align: center;
+	background-color: rgba(3, 3, 38, 0.944);
+	height: 60px;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	animation: title 4s infinite .5s alternate-reverse;
+}
+
+.download #title {
+	color: aquamarine !important;
+	border: 2px solid aquamarine !important;
+	border-radius: 15px !important;
+	text-align: center !important;
+	background-color: transparent !important;
+}
+
+@keyframes title {
+
+	0% {
+        border: 6px solid rgba(5, 39, 28, 0.488);
+	}
+    
+	40% {
+        border: 6px solid rgba(245, 245, 245, 0.555);
+	}
+
+	80% {
+        border: 6px solid rgba(5, 39, 28, 0.488);
+    }
+	100% {
+        border: 6px solid rgba(245, 245, 245, 0.555);
+	}
+	
+}
+
+
+#ticket #nom {
+	grid-area: nom;
+}
+
+#ticket #prenom {
+	grid-area: prenom;
+}
+
+#ticket #form {
+	grid-area: from;
+}
+
+#ticket #to {
+	grid-area: to;
+}
+
+#ticket #place {
+	grid-area: place;
+}
+
+#ticket #reference {
+	grid-area: reference;
+}
+
+#ticket #date {
+	grid-area: date;
+}
+
+#ticket #categorie {
+	grid-area: categorie;
+}
+
+#ticket #mode {
+	grid-area: mode;
+}
+
+#ticket #statut {
+	grid-area: statut;
+}
+
+#ticket [type="text"] {
+    transition: all .4s ease-in-out;
+	width: 100%;
+	height: 30px;
+    border: none;
+	border-bottom: 3px solid rgba(5, 39, 28, 0.488);
+	color: aquamarine;
+	background-color: transparent;
+	font-size: 13pt;
+	text-align: center;
+	pointer-events: none;
+	font-weight: bolder;
+}
+.download [type="text"] {
+transition: all .4s ease-in-out;
+	border-bottom: 3px solid rgba(5, 39, 28, 0.488) !important;
+	color: aquamarine !important;
+}
+
+#button {
+	top: 68vh;
+    height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    gap: 20px;
+}
+
+button {
+    transition: all .4s ease-in-out;
+	width: 250px;
+	height: 50px;
+	border: 2px solid rgba(3, 3, 38, 0.944);
+	background: rgba(3, 3, 38, 0.944);
+	box-shadow: 0 5px 10px rgba(3, 3, 38, 0.944);
+	color: white;
+	font-style: italic;
+	font-size: 14pt;
+    font-weight: bolder;
+	display: flex;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#button button:active {
+    transition: all .4s ease-in-out;
+    transform: scale(.5);
+}
+
+#button button:hover {
+    transition: all .4s ease-in-out;
+    background: transparent;
+    color: rgba(3, 3, 38, 0.944);
+}
+
+@media screen and (max-width: 800px) {
+    #button button .text-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #button button {
+        transition: all .4s ease-in-out;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #button button {
+        transition: all .4s ease-in-out;
+        width: 170px;
+    }
+}
+
+#ticket strong {
+	font-size: x-large;
+}
+
+.hide {
+	display: none;
+}

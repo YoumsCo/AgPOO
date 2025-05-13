@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#container {
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 60vh;
+    border: 3px solid rgba(3, 3, 38, 0.944);
+    padding: 10px;
+    gap: 10px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+@media screen and (max-width: 1000px) {
+    #container {
+        transition: all .4s ease-in-out;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #container {
+        transition: all .4s ease-in-out;
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        transition: all .4s ease-in-out;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        transition: all .4s ease-in-out;
+        width: 90vw;
+    }
+}
+
+
+#container form {
+    transition: all .4s ease-in-out;
+    position: relative;
+    width: 96%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#container #title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#container #title h2 {
+    background: url("../../../img/A3XO.gif");
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#container form [type="text"],
+#container form [type="date"] {
+    position: relative;
+    transition:  all .4s ease-in-out;
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    color: rgba(3, 3, 38, 0.944);
+    font-size: 13pt;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgba(3, 3, 38, 0.944);
+}
+
+#container .names [type="text"] {
+    transition: all 1s ease-in-out;
+    pointer-events: visible;
+}
+#container .event-none.first {
+    transition: all 1s ease-in-out;
+    pointer-events: auto !important;
+}
+
+#container .event-none {
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+}
+
+#container form [type="text"]::placeholder,
+#container form [type="date"]::placeholder {
+    transition:  all .2s ease-in-out;
+    opacity: 0;
+    color: rgba(3, 3, 38, 0.944);
+}
+
+#container form input:focus::placeholder {
+    transition:  all .4s ease-in-out;
+    opacity: 1;
+}
+
+#container form label {
+    color: rgba(3, 3, 38, 0.944);
+    font-size: 14pt;
+    font-weight: bolder;
+}
+
+#container form label #type-info,
+#container form label #info {
+    color: rgba(255, 0, 0, 0.541) !important;
+    font-weight: bolder;
+}
+
+#container form .label {
+    transition:  all .4s ease-in-out;
+    position: absolute;
+    transform: translate(13px, -28px);
+    z-index: -10;
+    color: rgba(3, 3, 38, 0.944);
+}
+
+#container form input:focus + .label,
+#container form input:not(:placeholder-shown) + .label {
+    transition:  all .4s ease-in-out;
+    transform: translateY(-50px);
+    font-size: 10pt;
+}
+
+#container form .fa {
+    transition:  all .3s ease-in-out;
+    position: relative;
+    left: 90%;
+    top: -30px;
+    font-size: 16pt;
+    z-index: -100;
+    color: rgba(3, 3, 38, 0.944);
+}
+
+#container form select {
+    transition:  all .3s ease-in-out;
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    color: rgba(3, 3, 38, 0.944);
+    font-size: 14pt;
+}
+
+#container form select option {
+    transition:  all .3s ease-in-out;
+    color: rgba(3, 3, 38, 0.944);
+    background: white;
+    font-size: 14pt;
+}
+
+#container form button,
+#container form [type="submit"] {
+    transition:  all .3s ease-in-out;
+    position: relative;
+    left: 24%;
+    width: 50%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid rgba(3, 3, 38, 0.944);
+    color: rgba(3, 3, 38, 0.944);
+    font-size: 14pt;
+}
+#container form button:hover,
+#container form [type="submit"]:hover {
+    transition:  all .2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(3, 3, 38, 0.944);
+    color: whitesmoke;
+    background: rgba(3, 3, 38, 0.944);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#container form button:active,
+#container form [type="submit"]:active {
+    transition:  all .2s ease-in-out;
+    transform: scale(.9);
+}
+
+
+#container form .button {
+    transition: all .4s ease-in-out;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#container form .button button,
+#container form .button [type="submit"] {
+    left: 0 !important;
+}
+
+
+#container .contain {
+    transition: all 1s ease-in-out;
+    position: fixed;
+    width: 90%;
+    display: grid;
+    gap: 10px;
+}
+
+#container .contain.translateX {
+    transition: transform 3s ease-in-out,
+                opacity .7s ease-in-out;
+    transform: translateX(1000%) !important;
+    opacity: 0 !important;
+}
+
+#container .contain.translateX-left {
+    transition: transform 3s ease-in-out,
+                opacity .7s ease-in-out;
+    transform: translateX(-1000%);
+    opacity: 0;
+    z-index: -10000 !important;
+}

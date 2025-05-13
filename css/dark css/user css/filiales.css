@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+body::-webkit-scrollbar {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(4, 39, 27, 0.9);
+    border-radius: 20px;
+}
+
+
+/*
+**************************************************************************************
+Gestion de la barre de recherche 
+************************************************************************************** 
+*/
+
+#search {
+    transition: all .4s ease-in-out;
+    position: fixed;
+    width: 400px;
+    height: 50px;
+    top: 52px;
+    right: 2%;
+}
+
+@media screen and (max-width: 480px) {
+    #search {
+        transition: all .4s ease-in-out;
+        width: 280px ;
+    }
+}
+
+#search [type="search"] {
+    transition: all .4s ease-in-out;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    color: aquamarine;
+    font-size: 15pt;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+
+#search [type="search"]::placeholder {
+    transition: all .4s ease-in-out;
+    color: aquamarine;
+}
+
+#search [type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+    content: url('../../../img/cancel.png');
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: aquamarine;
+}
+
+/*
+**************************************************************************************
+Gestio du tableau 
+************************************************************************************** 
+*/
+
+table {
+    transition: all .4s ease-in-out;
+    position: relative;
+    top: 120px;
+    width: 100vw;
+    font-size: 16pt;
+    border-collapse: collapse;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    text-align: justify;
+    padding: 10px;
+}
+
+table th {
+    transition: all .4s ease-in-out;
+    background: rgba(245, 245, 245, 0.827);
+    height: 45px;
+    color: rgba(9, 9, 48, 0.921);
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20pt;
+}
+
+@media screen and (max-width: 500px) {
+    table th {
+        transition: all .4s ease-in-out;
+        font-size: 15pt !important;
+    }
+}
+
+table td {
+    transition: all .4s ease-in-out;
+    text-align: center;
+}
+
+table tr td a {
+    transition: all .4s ease-in-out;
+    text-decoration: none;
+    font-size: 14pt;
+    background: url("../../../img/2HaB.gif");
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+table tr td a:hover {
+    transition: all .4s ease-in-out;
+    background: transparent !important;
+    color: aquamarine !important;
+}
+
+@media screen and (max-width: 500px) {
+    table tr td a {
+        transition: all .4s ease-in-out;
+        font-size: 10pt !important;
+    }
+}
+
+.hide {
+    transition: all .4s ease-in-out;
+    opacity: 0 !important;
+    z-index: -1000;
+}
+
+.search-true a {
+    transition: all .4s ease-in-out;
+    background: transparent !important;
+    color: aquamarine !important;
+}
